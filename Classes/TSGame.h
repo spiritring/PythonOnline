@@ -3,7 +3,7 @@
 
 #include "cocos2d.h"
 
-enum TSDirection
+enum EnDirection
 {
 	TSFingerLeft,
 	TSFingerRight,
@@ -11,10 +11,18 @@ enum TSDirection
 	TSFingerUp
 };
 
-enum TSGoods
+enum EnGoods
 {
 	TSMapNull = 0,
 	TSMapRock = 1,
+	TSMapFriend_Doping = 100,
+	TSMapFriend_Grow = 101,
+	TSMapFriend_Rock = 102,
+	TSMapFriend_Chaos = 103,
+	TSMapEnemy_Doping = 500,
+	TSMapEnemy_Grow = 501,
+	TSMapEnemy_Rock = 502,
+	TSMapEnemy_Chaos = 503,
 };
 
 #define  MAX_MAP_WIDTH 24
@@ -27,6 +35,20 @@ public:
 	cocos2d::Node* m_spr = nullptr;
 	int m_mapX = 0;
 	int m_mapY = 0;
+};
+
+class TSGoodsFriend
+{
+public:
+	cocos2d::Node* m_spr = nullptr;
+	int m_type = 0;
+};
+
+class TSGoodsEnemy
+{
+public:
+	cocos2d::Node* m_spr = nullptr;
+
 };
 
 class TSGame : public cocos2d::Layer
@@ -46,10 +68,11 @@ public:
 	void TouchEnded(cocos2d::Touch* touch, cocos2d::Event* event);
 	void TouchCancelled(cocos2d::Touch* touch, cocos2d::Event* event);
 
-	void OnDirection(TSDirection od);
+	void OnDirection(EnDirection od);
 
 	void GameUpdate(float delta);
 
+	void CreateGoods(int x, int y, EnGoods goodsType);
 private:
 	int m_Map[MAX_MAP_WIDTH][MAX_MAP_HEIGHT];
 
@@ -59,7 +82,7 @@ private:
 	cocos2d::Vec2 m_vecBeginTouch;
 	cocos2d::Vec2 m_vecEndTouch;
 
-	TSDirection m_od = TSFingerRight;
+	EnDirection m_od = TSFingerRight;
 
 	int m_dx = 1;
 	int m_dy = 0;

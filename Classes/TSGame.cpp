@@ -75,7 +75,7 @@ void TSGame::TouchEnded(Touch* touch, Event* event)
 
 	auto vec = m_vecEndTouch - m_vecBeginTouch;
 	auto p = (180.0f / 3.14f) * atan2f(vec.y, vec.x);
-	TSDirection direction;
+	EnDirection direction;
 
 	if (p >= -45 && p < 45)
 	{
@@ -119,7 +119,7 @@ void TSGame::TouchCancelled(Touch* touch, Event* event)
 	CCLOG("ccTouchCancelled");
 }
 
-void TSGame::OnDirection(TSDirection od)
+void TSGame::OnDirection(EnDirection od)
 {
 	m_od = od;
 	if (od == TSFingerUp)
@@ -229,4 +229,9 @@ void TSGame::GameUpdate(float delta)
 	}
 
 	m_Map[m_createX][m_createY] = TSMapRock;
+}
+
+void TSGame::CreateGoods(int x, int y, EnGoods goodsType)
+{
+
 }
