@@ -5,6 +5,14 @@
       <RootFolder Name=".">
         <Project Name="MainScene.csd" Type="Scene" />
         <Image Name="HelloWorld.png" />
+        <Image Name="CloseNormal.png" />
+        <Image Name="20111114222435-141339.jpg" />
+        <Image Name="20111114222435-258946.jpg" />
+        <Image Name="SjApk_com_8222146.jpg" />
+        <Image Name="Body.png" />
+        <Image Name="Head.png" />
+        <Project Name="SnakeBody.csd" Type="Node" />
+        <Project Name="SnakeHead.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>
