@@ -11,9 +11,23 @@ enum TSDirection
 	TSFingerUp
 };
 
+enum TSGoods
+{
+	TSMapNull = 0,
+	TSMapRock = 1,
+};
+
 #define  MAX_MAP_WIDTH 24
 #define  MAX_MAP_HEIGHT 16
 #define  BODY_PIX 40
+
+class TSSprite
+{
+public:
+	cocos2d::Node* m_spr = nullptr;
+	int m_mapX = 0;
+	int m_mapY = 0;
+};
 
 class TSGame : public cocos2d::Layer
 {
@@ -39,6 +53,9 @@ public:
 private:
 	int m_Map[MAX_MAP_WIDTH][MAX_MAP_HEIGHT];
 
+	cocos2d::Node* m_csMainScene = nullptr;
+	cocos2d::Node* m_csGameLayer = nullptr;
+
 	cocos2d::Vec2 m_vecBeginTouch;
 	cocos2d::Vec2 m_vecEndTouch;
 
@@ -47,12 +64,12 @@ private:
 	int m_dx = 1;
 	int m_dy = 0;
 
-	int m_bodySize = 5;
+	int m_bodySize = 10;
 
 	int m_createX = MAX_MAP_WIDTH / 2;
 	int m_createY = MAX_MAP_HEIGHT / 2;
 
-	std::list<cocos2d::Node*> m_SnakeList;
+	std::list<TSSprite*> m_SnakeList;
 };
 
 #endif // __TSMENU_SCENE_H__

@@ -34,8 +34,9 @@ bool TSGame::init()
 		return false;
 	}
 
-	auto rootNode = CSLoader::createNode("MainScene.csb");
-	addChild(rootNode);
+	m_csMainScene = CSLoader::createNode("MainScene.csb");
+	m_csGameLayer = m_csMainScene->getChildByName("GameLayer");
+	addChild(m_csMainScene);
 
 	auto _touchListener = EventListenerTouchOneByOne::create();
 	_touchListener->setSwallowTouches(false);
@@ -44,6 +45,14 @@ bool TSGame::init()
 	_touchListener->onTouchEnded = CC_CALLBACK_2(TSGame::TouchEnded, this);
 	_touchListener->onTouchCancelled = CC_CALLBACK_2(TSGame::TouchCancelled, this);
 	_eventDispatcher->addEventListenerWithSceneGraphPriority(_touchListener, this);
+
+	for (int i = 0; i < MAX_MAP_WIDTH; i++) 
+	{
+		for (int j = 0; j < MAX_MAP_HEIGHT; j++) 
+		{
+			m_Map[i][j] = 0;
+		}
+	}
 
 	this->schedule(CC_SCHEDULE_SELECTOR(TSGame::GameUpdate), 0.5f);
 	return true;
@@ -66,23 +75,43 @@ void TSGame::TouchEnded(Touch* touch, Event* event)
 
 	auto vec = m_vecEndTouch - m_vecBeginTouch;
 	auto p = (180.0f / 3.14f) * atan2f(vec.y, vec.x);
+	TSDirection direction;
 
-	if (p >= -45 && p < 45) 
+	if (p >= -45 && p < 45)
 	{
-		OnDirection(TSFingerRight);
+		direction = TSFingerRight;
 	}
 	else if (p >= 45 && p < 135)
 	{
-		OnDirection(TSFingerUp);
+		direction = TSFingerUp;
 	}
 	else if (p >= 135 && p < 181 || p >= -181 && p < -135)
 	{
-		OnDirection(TSFingerLeft);
+		direction = TSFingerLeft;
 	}
 	else if (p >= -135 && p < -45)
 	{
-		OnDirection(TSFingerDown);
+		direction = TSFingerDown;
 	}
+
+	if (m_od == TSFingerUp && direction == TSFingerDown)
+	{
+		return;
+	}
+	else if (m_od == TSFingerDown && direction == TSFingerUp)
+	{
+		return;
+	}
+	else if (m_od == TSFingerLeft && direction == TSFingerRight)
+	{
+		return;
+	}
+	else if (m_od == TSFingerRight && direction == TSFingerLeft)
+	{
+		return;
+	}
+
+	OnDirection(direction);
 }
 
 void TSGame::TouchCancelled(Touch* touch, Event* event)
@@ -140,19 +169,26 @@ void TSGame::GameUpdate(float delta)
 
 	auto sprBody = CSLoader::createNode("SnakeBody.csb");
 	sprBody->setPosition(Point(BODY_PIX * m_createX, BODY_PIX * m_createY));
-	addChild(sprBody);
+	m_csGameLayer->addChild(sprBody);
 
-	m_SnakeList.push_back(sprBody);
+	auto tsSpr = new TSSprite();
+	tsSpr->m_spr = sprBody;
+	tsSpr->m_mapX = m_createX;
+	tsSpr->m_mapY = m_createY;
+
+	m_SnakeList.push_back(tsSpr);
 	if (m_SnakeList.size() > m_bodySize)
 	{
-		removeChild(m_SnakeList.front());
+		auto sprTail = m_SnakeList.front();
+		m_Map[sprTail->m_mapX][sprTail->m_mapY] = TSMapNull;
+		m_csGameLayer->removeChild(sprTail->m_spr);
 		m_SnakeList.pop_front();
 	}
 
 	for(auto iter : m_SnakeList)
 	{
-		auto sprBody = static_cast<Sprite*>(iter->getChildByName("Body"));
-		auto sprHead = static_cast<Sprite*>(iter->getChildByName("Head"));
+		auto sprBody = static_cast<Sprite*>(iter->m_spr->getChildByName("Body"));
+		auto sprHead = static_cast<Sprite*>(iter->m_spr->getChildByName("Head"));
 		
 		if (iter == m_SnakeList.back())
 		{
@@ -181,4 +217,16 @@ void TSGame::GameUpdate(float delta)
 			sprHead->setVisible(false);
 		}
 	}
+
+	if (m_Map[m_createX][m_createY] == TSMapRock)
+	{
+		//ÓÎÏ·½áÊø
+		this->unschedule(CC_SCHEDULE_SELECTOR(TSGame::GameUpdate));
+		cout << "GameOver!" << endl;
+		auto labGameOver = m_csMainScene->getChildByName("Lab_GameOver");
+		labGameOver->setVisible(true);
+		return;
+	}
+
+	m_Map[m_createX][m_createY] = TSMapRock;
 }
