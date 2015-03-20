@@ -11,6 +11,10 @@ enum TSDirection
 	TSFingerUp
 };
 
+#define  MAX_MAP_WIDTH 24
+#define  MAX_MAP_HEIGHT 16
+#define  BODY_PIX 40
+
 class TSGame : public cocos2d::Layer
 {
 public:
@@ -33,16 +37,20 @@ public:
 	void GameUpdate(float delta);
 
 private:
+	int m_Map[MAX_MAP_WIDTH][MAX_MAP_HEIGHT];
+
 	cocos2d::Vec2 m_vecBeginTouch;
 	cocos2d::Vec2 m_vecEndTouch;
 
-	TSDirection m_od;
+	TSDirection m_od = TSFingerRight;
 
 	int m_dx = 1;
 	int m_dy = 0;
 
-	int m_createX = 24/2;
-	int m_createY = 16/2;
+	int m_bodySize = 5;
+
+	int m_createX = MAX_MAP_WIDTH / 2;
+	int m_createY = MAX_MAP_HEIGHT / 2;
 
 	std::list<cocos2d::Node*> m_SnakeList;
 };

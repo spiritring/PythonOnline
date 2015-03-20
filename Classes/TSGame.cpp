@@ -122,28 +122,28 @@ void TSGame::GameUpdate(float delta)
 
 	if (m_createY < 0) 
 	{
-		m_createY = 16-1;
+		m_createY = MAX_MAP_HEIGHT - 1;
 	}
-	else if (m_createY >= 16)
+	else if (m_createY >= MAX_MAP_HEIGHT)
 	{
 		m_createY = 0;
 	}
 
 	if (m_createX < 0)
 	{
-		m_createX = 24-1;
+		m_createX = MAX_MAP_WIDTH - 1;
 	}
-	else if (m_createX >= 24)
+	else if (m_createX >= MAX_MAP_WIDTH)
 	{
 		m_createX = 0;
 	}
 
 	auto sprBody = CSLoader::createNode("SnakeBody.csb");
-	sprBody->setPosition(Point(40 * m_createX, 40 * m_createY));
+	sprBody->setPosition(Point(BODY_PIX * m_createX, BODY_PIX * m_createY));
 	addChild(sprBody);
 
 	m_SnakeList.push_back(sprBody);
-	if (m_SnakeList.size() > 5)
+	if (m_SnakeList.size() > m_bodySize)
 	{
 		removeChild(m_SnakeList.front());
 		m_SnakeList.pop_front();
