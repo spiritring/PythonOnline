@@ -12,15 +12,25 @@
         <PrePosition X="0.0000" Y="0.0000" />
         <PreSize X="0.0000" Y="0.0000" />
         <Children>
-          <NodeObjectData Name="Sprite_1" ActionTag="665239685" FrameEvent="" Tag="7" RightMargin="-40.0000" TopMargin="-40.0000" ctype="SpriteObjectData">
-            <Position X="0.0000" Y="0.0000" />
+          <NodeObjectData Name="Body" ActionTag="665239685" FrameEvent="" Tag="7" RightMargin="-40.0000" TopMargin="-40.0000" ctype="SpriteObjectData">
+            <Position X="20.0000" Y="20.0000" />
             <Scale ScaleX="1.0000" ScaleY="1.0000" />
-            <AnchorPoint />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
             <CColor A="255" R="255" G="255" B="255" />
             <Size X="40.0000" Y="40.0000" />
             <PrePosition X="0.0000" Y="0.0000" />
             <PreSize X="0.0000" Y="0.0000" />
             <FileData Type="Normal" Path="Body.png" />
+          </NodeObjectData>
+          <NodeObjectData Name="Head" ActionTag="-600926776" FrameEvent="" Tag="8" RightMargin="-40.0000" TopMargin="-40.0000" ctype="SpriteObjectData">
+            <Position X="20.0000" Y="20.0000" />
+            <Scale ScaleX="1.0000" ScaleY="1.0000" />
+            <AnchorPoint ScaleX="0.5000" ScaleY="0.5000" />
+            <CColor A="255" R="255" G="255" B="255" />
+            <Size X="40.0000" Y="40.0000" />
+            <PrePosition X="0.0000" Y="0.0000" />
+            <PreSize X="0.0000" Y="0.0000" />
+            <FileData Type="Normal" Path="Head.png" />
           </NodeObjectData>
         </Children>
       </ObjectData>
