@@ -283,6 +283,7 @@ void TSGame::EatGoods(EnGoods id)
             {
                 m_GameSpeed = 0.2f;
                 this->schedule(CC_SCHEDULE_SELECTOR(TSGame::GameUpdate), m_GameSpeed);
+                m_bodySize ++;
             }
             break;
         case TSMapFriend_Rock:
@@ -296,6 +297,7 @@ void TSGame::EatGoods(EnGoods id)
                 TSMapBlock& mapBlock = m_Map[tailPosX][tailPosY];
                 mapBlock.m_spr = sprBody;
                 mapBlock.m_GoodsType = TSMapRock;
+                m_bodySize ++;
             }
             break;
         case TSMapFriend_Grow:
@@ -305,7 +307,7 @@ void TSGame::EatGoods(EnGoods id)
             break;
         case TSMapFriend_Chaos:
             {
-                
+                m_bodySize ++;
             }
             break;
         default:
