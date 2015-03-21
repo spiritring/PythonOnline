@@ -13,6 +13,16 @@
         <Image Name="Head.png" />
         <Project Name="SnakeBody.csd" Type="Node" />
         <Project Name="SnakeHead.csd" Type="Node" />
+        <Image Name="Goods_Chaos.png" />
+        <Image Name="Goods_Doping.png" />
+        <Image Name="Goods_Grow.png" />
+        <Image Name="Goods_Rock.png" />
+        <Project Name="Goods_F_Chaos.csd" Type="Node" />
+        <Project Name="Goods_F_Doping.csd" Type="Node" />
+        <Project Name="Goods_F_Grow.csd" Type="Node" />
+        <Project Name="Goods_F_Rock.csd" Type="Node" />
+        <Image Name="Map_Rock.png" />
+        <Project Name="Map_Rock.csd" Type="Node" />
       </RootFolder>
     </Group>
   </SolutionFolder>

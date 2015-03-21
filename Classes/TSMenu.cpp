@@ -12,11 +12,11 @@ Scene* TSMenu::createScene()
     auto scene = Scene::create();
     
     // 'layer' is an autorelease object
-	auto layer = TSMenu::create();
-
+    auto layer = TSMenu::create();
+    
     // add layer as a child to scene
     scene->addChild(layer);
-
+    
     // return the scene
     return scene;
 }
@@ -30,6 +30,6 @@ bool TSMenu::init()
     {
         return false;
     }
-
+    
     return true;
 }

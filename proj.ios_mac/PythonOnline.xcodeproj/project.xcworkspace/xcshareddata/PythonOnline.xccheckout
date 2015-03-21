@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>B9DB2BB2-F465-4EA5-9C2B-371098F9A8D7</string>
+	<key>IDESourceControlProjectName</key>
+	<string>PythonOnline</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C36620DAC555AEBCBC5A8D6725AA593EC6AFDC7F</key>
+		<string>https://github.com/spiritring/PythonOnline.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>proj.ios_mac/PythonOnline.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C36620DAC555AEBCBC5A8D6725AA593EC6AFDC7F</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/spiritring/PythonOnline.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C36620DAC555AEBCBC5A8D6725AA593EC6AFDC7F</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C36620DAC555AEBCBC5A8D6725AA593EC6AFDC7F</string>
+			<key>IDESourceControlWCCName</key>
+			<string>PythonOnline</string>
+		</dict>
+	</array>
+</dict>
+</plist>
