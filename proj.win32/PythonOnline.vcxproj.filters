@@ -57,6 +57,9 @@
     <ClCompile Include="..\Classes\TSEngine\TSTCP.cpp">
       <Filter>src\TSEngine</Filter>
     </ClCompile>
+    <ClCompile Include="..\Classes\TSConnect.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
@@ -100,6 +103,9 @@
     </ClInclude>
     <ClInclude Include="..\Classes\TSEngine\TSTCP.h">
       <Filter>src\TSEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Classes\TSConnect.h">
+      <Filter>src</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

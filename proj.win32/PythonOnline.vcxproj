@@ -138,6 +138,7 @@ xcopy /Y /Q "$(COCOS_FRAMEWORKS)\cocos2d-x-3.4\prebuilt\win32\*.*" "$(OutDir)"
     <ClCompile Include="..\Classes\JsonCpp\json_reader.cpp" />
     <ClCompile Include="..\Classes\JsonCpp\json_value.cpp" />
     <ClCompile Include="..\Classes\JsonCpp\json_writer.cpp" />
+    <ClCompile Include="..\Classes\TSConnect.cpp" />
     <ClCompile Include="..\Classes\TSEngine\TSEngine.cpp" />
     <ClCompile Include="..\Classes\TSEngine\TSEvent.cpp" />
     <ClCompile Include="..\Classes\TSEngine\TSLog.cpp" />
@@ -151,6 +152,7 @@ xcopy /Y /Q "$(COCOS_FRAMEWORKS)\cocos2d-x-3.4\prebuilt\win32\*.*" "$(OutDir)"
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
     <ClInclude Include="..\Classes\JsonCpp\json_batchallocator.h" />
+    <ClInclude Include="..\Classes\TSConnect.h" />
     <ClInclude Include="..\Classes\TSEngine\exbuffer.h" />
     <ClInclude Include="..\Classes\TSEngine\TSCommon.h" />
     <ClInclude Include="..\Classes\TSEngine\TSEngine.h" />

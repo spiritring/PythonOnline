@@ -3,6 +3,7 @@
 #include "ui/CocosGUI.h"
 #include <iostream>
 #include "base/CCRef.h"
+#include "TSConnect.h"
 
 USING_NS_CC;
 
@@ -57,6 +58,8 @@ bool TSGame::init()
     
     
     this->schedule(CC_SCHEDULE_SELECTOR(TSGame::GameUpdate), m_GameSpeed);
+
+	TSConnect::GetSingleTon()->initSocket(); // 初始化服务器连接
     return true;
 }
 
