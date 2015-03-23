@@ -53,7 +53,7 @@ void TSConnect::TSEventConnectGateWay( Json::Value jValue )
     TSLog("TSEventConnectGateWay: %s", jValue.toStyledString().c_str());
     TSTCP::GetSingleTon()->CloseSocket(); // 断开网关
 
-    std::string& sIP = jValue["IP"].asString();
+    std::string sIP = jValue["IP"].asString();
     int iPort = jValue["Port"].asInt();
 
     // 连接网关服

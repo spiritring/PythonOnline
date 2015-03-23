@@ -1,4 +1,9 @@
 <UserData>
+  <OpenedDocuments>
+    <FilePathData Path="Goods_F_Chaos.csd" />
+    <FilePathData Path="Map_Rock.csd" />
+  </OpenedDocuments>
+  <ActiveDocument Path="Map_Rock.csd" />
   <Properties>
     <Item Key="PackageParamsKey">
       <Value ctype="PackageParams">

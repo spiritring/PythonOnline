@@ -1,5 +1,5 @@
 #include "TSSocket.h"
-#include "..\CCCommon.h"
+//#include "..\CCCommon.h"
 
 #ifdef WIN32
 
@@ -56,7 +56,7 @@ SOCKET TSSocket::CreateClient(string sIp, unsigned short usPort) {
      addrSrv.sin_port = htons(usPort);
      addrSrv.sin_addr.s_addr = inet_addr(sIp.c_str());
      //创建一个socket
-     hSocket = socket(AF_INET, SOCK_STREAM, 0);
+     SOCKET hSocket = socket(AF_INET, SOCK_STREAM, 0);
     //socket创建失败
     if (hSocket < 0)
     {
@@ -67,14 +67,14 @@ SOCKET TSSocket::CreateClient(string sIp, unsigned short usPort) {
       //CCLog("%s", "socket success!!!");
     }
     //创建一个socket链接
-    connectState = connect(hSocket, (struct sockaddr *) &addrSrv, sizeof(addrSrv));
+    int connectState = connect(hSocket, (struct sockaddr *) &addrSrv, sizeof(addrSrv));
 	#endif
     if (connectState < 0)
     {   
         #ifdef WIN32
 		closesocket(hSocket);
 		#else
-		close(hSocket);
+		shutdown(hSocket, SHUT_RDWR);
 		#endif
         return 0;
     }

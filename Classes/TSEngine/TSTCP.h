@@ -9,6 +9,13 @@
 #include "..\pthread\pthread.h"
 #else
 #include <pthread.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "netdb.h"
+#include "netinet/in.h"
+#include <arpa/inet.h>
 #define SOCKET int
 #endif
 
@@ -41,7 +48,7 @@ public:
 #ifdef WIN32
         ::closesocket(m_hSocket);
 #else
-        ::close(m_hSocket);
+        shutdown(m_hSocket, SHUT_RDWR);
 #endif
         m_hSocket = 0;
     }

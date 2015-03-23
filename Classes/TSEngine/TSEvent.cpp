@@ -1,6 +1,5 @@
 #include "TSEvent.h"
 #include "TSLog.h"
-#include "..\CCCommon.h"
 
 void TSEvent::RegistEvent( string sEventKey, void* pInst, TpInstEventFun pFun )
 {

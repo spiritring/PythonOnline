@@ -5,7 +5,7 @@
 #include <map>
 #include <list>
 #include "TSObject.h"
-#include "JsonCpp/json.h"
+#include "../JsonCpp/json.h"
 
 using namespace std;
 

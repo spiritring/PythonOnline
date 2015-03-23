@@ -11,6 +11,19 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		1E4146BB8C923CA52DB7FFF8 /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 36C64C27B51AFFE8FF5464D4 /* libcocos2d iOS.a */; };
 		288765A50DF7441C002DB57D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 288765A40DF7441C002DB57D /* CoreGraphics.framework */; };
+		30595D381AC04D2900D94495 /* json_internalarray.inl in Resources */ = {isa = PBXBuildFile; fileRef = 30595D1A1AC04D2900D94495 /* json_internalarray.inl */; };
+		30595D391AC04D2900D94495 /* json_internalmap.inl in Resources */ = {isa = PBXBuildFile; fileRef = 30595D1B1AC04D2900D94495 /* json_internalmap.inl */; };
+		30595D3A1AC04D2900D94495 /* json_reader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D1C1AC04D2900D94495 /* json_reader.cpp */; };
+		30595D3B1AC04D2900D94495 /* json_value.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D1D1AC04D2900D94495 /* json_value.cpp */; };
+		30595D3C1AC04D2900D94495 /* json_valueiterator.inl in Resources */ = {isa = PBXBuildFile; fileRef = 30595D1E1AC04D2900D94495 /* json_valueiterator.inl */; };
+		30595D3D1AC04D2900D94495 /* json_writer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D1F1AC04D2900D94495 /* json_writer.cpp */; };
+		30595D3E1AC04D2900D94495 /* sconscript in Resources */ = {isa = PBXBuildFile; fileRef = 30595D211AC04D2900D94495 /* sconscript */; };
+		30595D3F1AC04D2900D94495 /* TSConnect.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D281AC04D2900D94495 /* TSConnect.cpp */; };
+		30595D401AC04D2900D94495 /* TSEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D2D1AC04D2900D94495 /* TSEngine.cpp */; };
+		30595D411AC04D2900D94495 /* TSEvent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D2F1AC04D2900D94495 /* TSEvent.cpp */; };
+		30595D421AC04D2900D94495 /* TSLog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D311AC04D2900D94495 /* TSLog.cpp */; };
+		30595D431AC04D2900D94495 /* TSSocket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D341AC04D2900D94495 /* TSSocket.cpp */; };
+		30595D441AC04D2900D94495 /* TSTCP.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30595D361AC04D2900D94495 /* TSTCP.cpp */; };
 		30FBBF881ABD455F000A8674 /* TSGame.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30FBBF841ABD455F000A8674 /* TSGame.cpp */; };
 		30FBBF891ABD455F000A8674 /* TSMenu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 30FBBF861ABD455F000A8674 /* TSMenu.cpp */; };
 		3F0F4FE7BFD23C718A7344DE /* res in Resources */ = {isa = PBXBuildFile; fileRef = 0F3A4B559B3019F2C7B0E080 /* res */; };
@@ -69,6 +82,37 @@
 		1D6058910D05DD3D006BFB54 /* PythonOnline iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PythonOnline iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		30595D141AC04D2900D94495 /* autolink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = autolink.h; sourceTree = "<group>"; };
+		30595D151AC04D2900D94495 /* config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		30595D161AC04D2900D94495 /* features.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = features.h; sourceTree = "<group>"; };
+		30595D171AC04D2900D94495 /* forwards.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = forwards.h; sourceTree = "<group>"; };
+		30595D181AC04D2900D94495 /* json.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json.h; sourceTree = "<group>"; };
+		30595D191AC04D2900D94495 /* json_batchallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = json_batchallocator.h; sourceTree = "<group>"; };
+		30595D1A1AC04D2900D94495 /* json_internalarray.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_internalarray.inl; sourceTree = "<group>"; };
+		30595D1B1AC04D2900D94495 /* json_internalmap.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_internalmap.inl; sourceTree = "<group>"; };
+		30595D1C1AC04D2900D94495 /* json_reader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_reader.cpp; sourceTree = "<group>"; };
+		30595D1D1AC04D2900D94495 /* json_value.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_value.cpp; sourceTree = "<group>"; };
+		30595D1E1AC04D2900D94495 /* json_valueiterator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = json_valueiterator.inl; sourceTree = "<group>"; };
+		30595D1F1AC04D2900D94495 /* json_writer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = json_writer.cpp; sourceTree = "<group>"; };
+		30595D201AC04D2900D94495 /* reader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = reader.h; sourceTree = "<group>"; };
+		30595D211AC04D2900D94495 /* sconscript */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = sconscript; sourceTree = "<group>"; };
+		30595D221AC04D2900D94495 /* value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = value.h; sourceTree = "<group>"; };
+		30595D231AC04D2900D94495 /* writer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = writer.h; sourceTree = "<group>"; };
+		30595D281AC04D2900D94495 /* TSConnect.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSConnect.cpp; sourceTree = "<group>"; };
+		30595D291AC04D2900D94495 /* TSConnect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSConnect.h; sourceTree = "<group>"; };
+		30595D2B1AC04D2900D94495 /* exbuffer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = exbuffer.h; sourceTree = "<group>"; };
+		30595D2C1AC04D2900D94495 /* TSCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSCommon.h; sourceTree = "<group>"; };
+		30595D2D1AC04D2900D94495 /* TSEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSEngine.cpp; sourceTree = "<group>"; };
+		30595D2E1AC04D2900D94495 /* TSEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSEngine.h; sourceTree = "<group>"; };
+		30595D2F1AC04D2900D94495 /* TSEvent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSEvent.cpp; sourceTree = "<group>"; };
+		30595D301AC04D2900D94495 /* TSEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSEvent.h; sourceTree = "<group>"; };
+		30595D311AC04D2900D94495 /* TSLog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSLog.cpp; sourceTree = "<group>"; };
+		30595D321AC04D2900D94495 /* TSLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSLog.h; sourceTree = "<group>"; };
+		30595D331AC04D2900D94495 /* TSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSObject.h; sourceTree = "<group>"; };
+		30595D341AC04D2900D94495 /* TSSocket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSSocket.cpp; sourceTree = "<group>"; };
+		30595D351AC04D2900D94495 /* TSSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSSocket.h; sourceTree = "<group>"; };
+		30595D361AC04D2900D94495 /* TSTCP.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSTCP.cpp; sourceTree = "<group>"; };
+		30595D371AC04D2900D94495 /* TSTCP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSTCP.h; sourceTree = "<group>"; };
 		30FBBF841ABD455F000A8674 /* TSGame.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSGame.cpp; sourceTree = "<group>"; };
 		30FBBF851ABD455F000A8674 /* TSGame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TSGame.h; sourceTree = "<group>"; };
 		30FBBF861ABD455F000A8674 /* TSMenu.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TSMenu.cpp; sourceTree = "<group>"; };
@@ -233,6 +277,49 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		30595D131AC04D2900D94495 /* JsonCpp */ = {
+			isa = PBXGroup;
+			children = (
+				30595D141AC04D2900D94495 /* autolink.h */,
+				30595D151AC04D2900D94495 /* config.h */,
+				30595D161AC04D2900D94495 /* features.h */,
+				30595D171AC04D2900D94495 /* forwards.h */,
+				30595D181AC04D2900D94495 /* json.h */,
+				30595D191AC04D2900D94495 /* json_batchallocator.h */,
+				30595D1A1AC04D2900D94495 /* json_internalarray.inl */,
+				30595D1B1AC04D2900D94495 /* json_internalmap.inl */,
+				30595D1C1AC04D2900D94495 /* json_reader.cpp */,
+				30595D1D1AC04D2900D94495 /* json_value.cpp */,
+				30595D1E1AC04D2900D94495 /* json_valueiterator.inl */,
+				30595D1F1AC04D2900D94495 /* json_writer.cpp */,
+				30595D201AC04D2900D94495 /* reader.h */,
+				30595D211AC04D2900D94495 /* sconscript */,
+				30595D221AC04D2900D94495 /* value.h */,
+				30595D231AC04D2900D94495 /* writer.h */,
+			);
+			path = JsonCpp;
+			sourceTree = "<group>";
+		};
+		30595D2A1AC04D2900D94495 /* TSEngine */ = {
+			isa = PBXGroup;
+			children = (
+				30595D2B1AC04D2900D94495 /* exbuffer.h */,
+				30595D2C1AC04D2900D94495 /* TSCommon.h */,
+				30595D2D1AC04D2900D94495 /* TSEngine.cpp */,
+				30595D2E1AC04D2900D94495 /* TSEngine.h */,
+				30595D2F1AC04D2900D94495 /* TSEvent.cpp */,
+				30595D301AC04D2900D94495 /* TSEvent.h */,
+				30595D311AC04D2900D94495 /* TSLog.cpp */,
+				30595D321AC04D2900D94495 /* TSLog.h */,
+				30595D331AC04D2900D94495 /* TSObject.h */,
+				30595D341AC04D2900D94495 /* TSSocket.cpp */,
+				30595D351AC04D2900D94495 /* TSSocket.h */,
+				30595D361AC04D2900D94495 /* TSTCP.cpp */,
+				30595D371AC04D2900D94495 /* TSTCP.h */,
+			);
+			path = TSEngine;
+			sourceTree = "<group>";
+		};
 		46880B7519C43A67006E1F66 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +332,10 @@
 		46880B8319C43A87006E1F66 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				30595D131AC04D2900D94495 /* JsonCpp */,
+				30595D2A1AC04D2900D94495 /* TSEngine */,
+				30595D281AC04D2900D94495 /* TSConnect.cpp */,
+				30595D291AC04D2900D94495 /* TSConnect.h */,
 				30FBBF841ABD455F000A8674 /* TSGame.cpp */,
 				30FBBF851ABD455F000A8674 /* TSGame.h */,
 				30FBBF861ABD455F000A8674 /* TSMenu.cpp */,
@@ -395,15 +486,19 @@
 				5087E78317EB970100C73F5D /* Icon-152.png in Resources */,
 				5087E77D17EB970100C73F5D /* Default-568h@2x.png in Resources */,
 				5087E78517EB970100C73F5D /* Icon-72.png in Resources */,
+				30595D391AC04D2900D94495 /* json_internalmap.inl in Resources */,
 				521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */,
+				30595D3C1AC04D2900D94495 /* json_valueiterator.inl in Resources */,
 				50EF62A317ECD613001EB2F8 /* Icon-50.png in Resources */,
 				5087E78017EB970100C73F5D /* Icon-114.png in Resources */,
 				50EF62A217ECD613001EB2F8 /* Icon-29.png in Resources */,
 				50EF629617ECD46A001EB2F8 /* Icon-40.png in Resources */,
 				5087E78217EB970100C73F5D /* Icon-144.png in Resources */,
+				30595D3E1AC04D2900D94495 /* sconscript in Resources */,
 				50EF629817ECD46A001EB2F8 /* Icon-80.png in Resources */,
 				5087E78417EB970100C73F5D /* Icon-57.png in Resources */,
 				5087E77E17EB970100C73F5D /* Default.png in Resources */,
+				30595D381AC04D2900D94495 /* json_internalarray.inl in Resources */,
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				6F184B438EFB81222AF34B2C /* res in Resources */,
@@ -427,9 +522,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */,
+				30595D431AC04D2900D94495 /* TSSocket.cpp in Sources */,
 				46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */,
 				30FBBF881ABD455F000A8674 /* TSGame.cpp in Sources */,
 				503AE10017EB989F00D1A890 /* AppController.mm in Sources */,
+				30595D3F1AC04D2900D94495 /* TSConnect.cpp in Sources */,
+				30595D3D1AC04D2900D94495 /* json_writer.cpp in Sources */,
+				30595D401AC04D2900D94495 /* TSEngine.cpp in Sources */,
+				30595D441AC04D2900D94495 /* TSTCP.cpp in Sources */,
+				30595D421AC04D2900D94495 /* TSLog.cpp in Sources */,
+				30595D411AC04D2900D94495 /* TSEvent.cpp in Sources */,
+				30595D3B1AC04D2900D94495 /* json_value.cpp in Sources */,
+				30595D3A1AC04D2900D94495 /* json_reader.cpp in Sources */,
 				503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */,
 				30FBBF891ABD455F000A8674 /* TSMenu.cpp in Sources */,
 				503AE10117EB989F00D1A890 /* main.m in Sources */,

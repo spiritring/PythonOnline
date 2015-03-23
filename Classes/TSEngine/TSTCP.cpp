@@ -4,9 +4,8 @@
 #include "TSEvent.h"
 #include "exbuffer.h"
 #include <vector>
-#include "..\CCCommon.h"
 #include "TSEngine.h"
-#include "JsonCpp/json.h"
+#include "../JsonCpp/json.h"
 #include <sstream>
 
 #ifdef WIN32
@@ -45,7 +44,7 @@ static void recvHandle(unsigned char *rbuf, size_t len)
         }
         else
         {
-            std::string& sHeader = TSEngine::GetHeader(G_PacketBuffer, len);
+            std::string sHeader = TSEngine::GetHeader(G_PacketBuffer, len);
             TSEvent::GetSingleTon()->PushMessge(sHeader, G_PacketBuffer);
         }
     }
