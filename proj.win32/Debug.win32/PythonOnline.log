@@ -1,3 +1,4 @@
-﻿  TSGame.cpp
-  复制了 49 个文件
+﻿  复制了 49 个文件
+AppDelegate.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+     Creating library D:\TimeshiftProject\PythonOnline\proj.win32\Debug.win32\PythonOnline.lib and object D:\TimeshiftProject\PythonOnline\proj.win32\Debug.win32\PythonOnline.exp
   PythonOnline.vcxproj -> D:\TimeshiftProject\PythonOnline\proj.win32\Debug.win32\PythonOnline.exe

@@ -80,7 +80,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END)</AdditionalDependencies>
+      <AdditionalDependencies>%(AdditionalDependencies);$(_COCOS_LIB_WIN32_BEGIN);$(_COCOS_LIB_WIN32_END);pthreadVCE2.lib</AdditionalDependencies>
       <OutputFile>$(OutDir)$(ProjectName).exe</OutputFile>
       <AdditionalLibraryDirectories>$(OutDir);%(AdditionalLibraryDirectories);$(_COCOS_LIB_PATH_WIN32_BEGIN);$(_COCOS_LIB_PATH_WIN32_END)</AdditionalLibraryDirectories>
       <GenerateDebugInformation>true</GenerateDebugInformation>
@@ -135,6 +135,14 @@ xcopy /Y /Q "$(COCOS_FRAMEWORKS)\cocos2d-x-3.4\prebuilt\win32\*.*" "$(OutDir)"
   <ItemGroup>
     <ClCompile Include="..\Classes\AppDelegate.cpp" />
     <ClCompile Include="..\Classes\HelloWorldScene.cpp" />
+    <ClCompile Include="..\Classes\JsonCpp\json_reader.cpp" />
+    <ClCompile Include="..\Classes\JsonCpp\json_value.cpp" />
+    <ClCompile Include="..\Classes\JsonCpp\json_writer.cpp" />
+    <ClCompile Include="..\Classes\TSEngine\TSEngine.cpp" />
+    <ClCompile Include="..\Classes\TSEngine\TSEvent.cpp" />
+    <ClCompile Include="..\Classes\TSEngine\TSLog.cpp" />
+    <ClCompile Include="..\Classes\TSEngine\TSSocket.cpp" />
+    <ClCompile Include="..\Classes\TSEngine\TSTCP.cpp" />
     <ClCompile Include="..\Classes\TSGame.cpp" />
     <ClCompile Include="..\Classes\TSMenu.cpp" />
     <ClCompile Include="main.cpp" />
@@ -142,12 +150,27 @@ xcopy /Y /Q "$(COCOS_FRAMEWORKS)\cocos2d-x-3.4\prebuilt\win32\*.*" "$(OutDir)"
   <ItemGroup>
     <ClInclude Include="..\Classes\AppDelegate.h" />
     <ClInclude Include="..\Classes\HelloWorldScene.h" />
+    <ClInclude Include="..\Classes\JsonCpp\json_batchallocator.h" />
+    <ClInclude Include="..\Classes\TSEngine\exbuffer.h" />
+    <ClInclude Include="..\Classes\TSEngine\TSCommon.h" />
+    <ClInclude Include="..\Classes\TSEngine\TSEngine.h" />
+    <ClInclude Include="..\Classes\TSEngine\TSEvent.h" />
+    <ClInclude Include="..\Classes\TSEngine\TSLog.h" />
+    <ClInclude Include="..\Classes\TSEngine\TSObject.h" />
+    <ClInclude Include="..\Classes\TSEngine\TSSocket.h" />
+    <ClInclude Include="..\Classes\TSEngine\TSTCP.h" />
     <ClInclude Include="..\Classes\TSGame.h" />
     <ClInclude Include="..\Classes\TSMenu.h" />
     <ClInclude Include="main.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="game.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Classes\JsonCpp\json_internalarray.inl" />
+    <None Include="..\Classes\JsonCpp\json_internalmap.inl" />
+    <None Include="..\Classes\JsonCpp\json_valueiterator.inl" />
+    <None Include="..\Classes\JsonCpp\sconscript" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -23,6 +23,7 @@
         <Project Name="Goods_F_Rock.csd" Type="Node" />
         <Image Name="Map_Rock.png" />
         <Project Name="Map_Rock.csd" Type="Node" />
+        <Project Name="UIScene.csd" Type="Scene" />
       </RootFolder>
     </Group>
   </SolutionFolder>
